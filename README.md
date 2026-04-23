@@ -39,6 +39,20 @@ A abordagem adotada segue princípios de qualidade modernos:
   * `tests/ui` → testes de interface
   * `pages` → abstração da UI
   * `tests/api` → base para testes de API
+ 
+  ## |Rastreabilidade
+
+Os testes automatizados foram desenvolvidos com base nos cenários descritos em:
+
+* TEST_STRATEGY.md
+* TEST_CASES.md
+
+Garantindo alinhamento entre:
+
+* Requisitos
+* Casos de teste
+* Automação
+
 
 ### |Foco de qualidade
 
