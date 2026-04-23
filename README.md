@@ -5,7 +5,7 @@
 Este projeto foi desenvolvido como parte do processo seletivo para a posição de **Senior QA Engineer**, com foco em garantir qualidade, confiabilidade e escalabilidade em aplicações críticas relacionadas a **logística e seguros de cargas**.
 
 A solução foi construída utilizando **Playwright**, com abordagem moderna de automação, visando não apenas validar funcionalidades, mas também **mitigar riscos, prevenir regressões e apoiar decisões de engenharia**.
-
+Os testes validam comportamento real da API e não assumem padrões REST, garantindo maior confiabilidade em ambientes produtivos
 ---
 
 ## |Objetivo
