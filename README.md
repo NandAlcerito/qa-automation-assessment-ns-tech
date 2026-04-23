@@ -1,186 +1,59 @@
-# QA Automation Assessment - NS Tech
+# |QA Automation Assessment
 
-##  |Overview
-
-Este projeto foi desenvolvido como parte do processo seletivo para a posição de **Senior QA Engineer**, com foco em garantir qualidade, confiabilidade e escalabilidade em aplicações críticas relacionadas a **logística e seguros de cargas**.
-
-
-A solução foi construída utilizando **Playwright**, com abordagem moderna de automação, visando não apenas validar funcionalidades, mas também **mitigar riscos, prevenir regressões e apoiar decisões de engenharia**.
-Os testes validam comportamento real da API e não assumem padrões REST, garantindo maior confiabilidade em ambientes produtivos
----
-
-## |Objetivo
-
-Garantir a qualidade do sistema através de:
-
-* Testes automatizados de UI
-* Validação de cenários positivos e negativos
-* Estrutura escalável para crescimento da suíte
-* Separação de responsabilidades (Page Object Model)
-* Base para integração contínua (CI/CD)
+Projeto de automação de testes cobrindo **UI e API**, utilizando Playwright + TypeScript com arquitetura baseada em boas práticas de mercado.
 
 ---
 
-## | Estratégia de Testes
-
-A abordagem adotada segue princípios de qualidade modernos:
-
-### |Tipos de teste cobertos
-
-* Testes funcionais (UI)
-* Testes positivos (happy path)
-* Testes negativos (validação de erro)
-* Testes de regressão inicial
-
-### |Arquitetura
-
-* **Page Object Model (POM)** para reutilização e manutenção
-* Separação entre camadas:
-
-  * `tests/ui` → testes de interface
-  * `pages` → abstração da UI
-  * `tests/api` → base para testes de API
- 
-  ## |Rastreabilidade
-
-Os testes automatizados foram desenvolvidos com base nos cenários descritos em:
-
-* TEST_STRATEGY.md
-* TEST_CASES.md
-
-Garantindo alinhamento entre:
-
-* Requisitos
-* Casos de teste
-* Automação
-
-
-### |Foco de qualidade
-
-* Estabilidade dos testes
-* Legibilidade e manutenção
-* Facilidade de expansão
-* Isolamento de responsabilidades
+## |Stack
+- Playwright
+- TypeScript
+- API Testing (BrasilAPI)
+- UI Testing (SauceDemo)
+- Page Object Model (POM)
+- GitHub Actions (CI)
 
 ---
 
 ## |Estrutura do Projeto
+tests/
+api/
+cep.spec.ts
+cnpj.spec.ts
+ui/
+login.spec.ts
+purchase.spec.ts
+pages/
+LoginPage.ts
+InventoryPage.ts
+CheckoutPage.ts
+api/
+client.ts
 
 
-qa-automation-assessment-ns-tech/
-│
-├── tests/
-│   ├── ui/
-│   │   ├── login.spec.ts
-│   │   └── purchase.spec.ts
-│   ├── api/
-│   │   ├── cep.spec.ts
-│   │   └── cnpj.spec.ts
-│   └── e2e/
-│
-├── pages/
-│   └── LoginPage.ts
-│
-├── playwright.config.ts
-├── package.json
-└── README.md
+## |Como rodar localmente
 
-
----
-
-## |How to execute:
-
-### 1. Clonar o repositório
-
-
-git clone https://github.com/NandAlcerito/qa-automation-assessment-ns-tech.git
-cd qa-automation-assessment-ns-tech
-
-
-### 2. Instalar dependências
-
-
+bash
 npm install
-
-
-### 3. Instalar browsers do Playwright
-
-
-npx playwright install
-
-
-### 4. Executar testes
-
-
 npx playwright test
 
 
-### 5. Visualizar relatório
+## |Boas práticas aplicadas
+Separação de testes por domínio (API / UI)
+Page Object Model (POM)
+Reutilização de client para API
+Validação de contrato e regras de negócio
+Uso de baseURL (evita hardcode)
+Testes independentes e paralelos
 
-
+## |Relatório
 npx playwright show-report
 
+## |Destaques técnicos
+Testes API desacoplados de browser
+Validação robusta de respostas externas
+Multi-browser testing (Chromium, Firefox, WebKit)
+Estrutura escalável para novos cenários
 
----
-
-## |Cenários implementados
-
-### | Login
-
-* Login com credenciais válidas
-* Login com credenciais inválidas
-
-###  Fluxo de compra (base)
-
-* Estrutura preparada para validação de jornada completa
-
-### |API (estrutura inicial)
-
-* Testes preparados para expansão (ex: CEP, CNPJ)
-
----
-
-## |Riscos identificados
-
-* Dependência de ambiente externo (SauceDemo)
-* Falta de controle sobre dados de teste
-* Possível instabilidade de elementos UI
-
----
-
-## |Melhorias futuras
-
-* Integração com CI/CD (GitHub Actions)
-* Mock de serviços externos
-* Testes de performance
-* Testes de contrato (API)
-* Data-driven tests
-* Geração de massa de dados automatizada
-* Retry inteligente e controle de flakiness
-
----
-
-## | Decisões técnicas
-
-* Uso do Playwright pela sua confiabilidade e suporte multi-browser
-* Implementação de POM para reduzir acoplamento
-* Separação de testes por domínio (UI/API)
-* Estrutura preparada para crescimento contínuo
-
----
-
-## 🧪 Qualidade além do teste
-
-Este projeto não se limita à execução de testes automatizados.
-
-A proposta é demonstrar:
-
-* Pensamento crítico em QA
-* Prevenção de defeitos
-* Estrutura sustentável
-* Visão de produto e risco
-
-## |Autor
-
+## |Autora
 Fernanda Alcerito
-Senior QA Engineer
+Senior QA
