@@ -1,0 +1,23 @@
+{
+  "name": "qa-automation-assessment-ns-tech",
+  "version": "1.0.0",
+  "description": "End-to-end QA assessment covering UI and API testing with Playwright, including test strategy, automation, and quality-focused approach.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NandAlcerito/qa-automation-assessment-ns-tech.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/NandAlcerito/qa-automation-assessment-ns-tech/issues"
+  },
+  "homepage": "https://github.com/NandAlcerito/qa-automation-assessment-ns-tech#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.59.1",
+    "@types/node": "^25.6.0"
+  }
+}
